@@ -24,7 +24,7 @@
     <meta name="description" content="登陆原理学校是web登陆认证，只需发送一个GET请求即可。想要做到自动登陆，难点在于获取ip和判断脚本执行的时机。 脚本linux shell需要使用ifconfig命令获取ip，以arch系为例，需要安装net-tools校园网分配的ip都是10.开头的，所以可一用grep &#39;inet 10.&#39;，当然如果主机存在其他以10.开头的ip，可能会产生干扰，后续可考虑加入判断条件。当然">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一个自动连接重邮校园网的小技巧">
-<meta property="og:url" content="http://example.com/2022/06/22/xiaoyuanwang_autologin/index.html">
+<meta property="og:url" content="https://los-tobios.github.io/blog-tobios/2022/06/22/xiaoyuanwang_autologin/index.html">
 <meta property="og:site_name" content="Tobios&#39; Blog">
 <meta property="og:description" content="登陆原理学校是web登陆认证，只需发送一个GET请求即可。想要做到自动登陆，难点在于获取ip和判断脚本执行的时机。 脚本linux shell需要使用ifconfig命令获取ip，以arch系为例，需要安装net-tools校园网分配的ip都是10.开头的，所以可一用grep &#39;inet 10.&#39;，当然如果主机存在其他以10.开头的ip，可能会产生干扰，后续可考虑加入判断条件。当然">
 <meta property="og:locale" content="zh_CN">
@@ -50,17 +50,17 @@
 
   <!-- feed -->
   
-    <link rel="alternate" href="/atom.xml" title="Tobios' Blog" type="application/atom+xml">
+    <link rel="alternate" href="/blog-tobios/atom.xml" title="Tobios' Blog" type="application/atom+xml">
   
 
   
     
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/blog-tobios/css/main.css">
 
   
 
   
-    <link rel="shortcut icon" href="/logo/logo_small.png">
+    <link rel="shortcut icon" href="/blog-tobios/logo/logo_small.png">
   
 
   
@@ -87,8 +87,8 @@
 
 <header class="header">
 
-<div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://los-tobios.github.io/blog-tobios/logo/logo_small.png" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main">Tobios' Blog</div><div class="sub cap">Backups</div></a></div>
-<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/friends/">友链</a><a class="nav-item" href="/about/">关于</a></nav></header>
+<div class="logo-wrap"><a class="avatar" href="/blog-tobios/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://los-tobios.github.io/blog-tobios/logo/logo_small.png" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/blog-tobios/"><div class="main">Tobios' Blog</div><div class="sub cap">Backups</div></a></div>
+<nav class="menu dis-select"><a class="nav-item active" href="/blog-tobios/">文章</a><a class="nav-item" href="/blog-tobios/friends/">友链</a><a class="nav-item" href="/blog-tobios/about/">关于</a></nav></header>
 
 <div class="widgets">
 
@@ -96,7 +96,7 @@
 
 
 </div>
-<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/Los-Tobios" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/08a41b181ce68.svg"/></a><a class="social" href="/tobios@foxmail.com" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/a1b00e20f425d.svg"/></a></div></footer>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/Los-Tobios" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/08a41b181ce68.svg"/></a><a class="social" href="/blog-tobios/tobios@foxmail.com" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/a1b00e20f425d.svg"/></a></div></footer>
 
     </aside>
     <div class='l_main'>
@@ -104,7 +104,7 @@
 
       
 
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-06-22T13:29:51.000Z">2022-06-22</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/blog-tobios/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/blog-tobios/">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-06-22T13:29:51.000Z">2022-06-22</time></div></div>
 
 <article class='content md post'>
 <h1 class="article-title"><span>一个自动连接重邮校园网的小技巧</span></h1>
@@ -160,7 +160,7 @@
 
       
 <footer class="page-footer reveal fs12"><hr><div class="text"><p>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
-<p>本站由 <a href="http://example.com/">@Tobios</a> 创建，使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0" title="v1.8.0">Stellar</a> 作为主题。</p>
+<p>本站由 <a href="https://los-tobios.github.io/blog-tobios/blog-tobios/">@Tobios</a> 创建，使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0" title="v1.8.0">Stellar</a> 作为主题。</p>
 </div></footer>
 
       <div class='float-panel mobile-only blur' style='display:none'>
@@ -278,8 +278,8 @@
   // required plugins (only load if needs)
   stellar.plugins = {
     jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
-    sitesjs: '/js/plugins/sites.js',
-    friendsjs: '/js/plugins/friends.js',
+    sitesjs: '/blog-tobios/js/plugins/sites.js',
+    friendsjs: '/blog-tobios/js/plugins/friends.js',
   };
 
   // optional plugins
@@ -306,7 +306,7 @@
 <!-- required -->
 
   
-<script src="/js/main.js" async></script>
+<script src="/blog-tobios/js/main.js" async></script>
 
 
 
