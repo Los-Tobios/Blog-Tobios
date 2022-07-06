@@ -28,23 +28,23 @@
 <meta property="og:site_name" content="Tobios&#39; Blog">
 <meta property="og:description" content="登陆原理学校是web登陆认证，只需发送一个GET请求即可。想要做到自动登陆，难点在于获取ip和判断脚本执行的时机。 实现方案">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://www.sonder.tk:88/pictures/xiaoyuanwang_autologin/image_1.jpg">
-<meta property="og:image" content="http://www.sonder.tk:88/pictures/xiaoyuanwang_autologin/image_2.jpg">
-<meta property="og:image" content="http://www.sonder.tk:88/pictures/xiaoyuanwang_autologin/image_3.jpg">
-<meta property="og:image" content="http://www.sonder.tk:88/pictures/xiaoyuanwang_autologin/image_4.jpg">
-<meta property="og:image" content="http://www.sonder.tk:88/pictures/xiaoyuanwang_autologin/image_5.jpg">
-<meta property="og:image" content="http://www.sonder.tk:88/pictures/xiaoyuanwang_autologin/image_6.jpg">
-<meta property="og:image" content="http://www.sonder.tk:88/pictures/xiaoyuanwang_autologin/image_7.jpg">
-<meta property="og:image" content="http://www.sonder.tk:88/pictures/xiaoyuanwang_autologin/image_8.jpg">
+<meta property="og:image" content="http://example.com/pictures/xiaoyuanwang_autologin/image_1.jpg">
+<meta property="og:image" content="http://example.com/pictures/xiaoyuanwang_autologin/image_2.jpg">
+<meta property="og:image" content="http://example.com/pictures/xiaoyuanwang_autologin/image_3.jpg">
+<meta property="og:image" content="http://example.com/pictures/xiaoyuanwang_autologin/image_4.jpg">
+<meta property="og:image" content="http://example.com/pictures/xiaoyuanwang_autologin/image_5.jpg">
+<meta property="og:image" content="http://example.com/pictures/xiaoyuanwang_autologin/image_6.jpg">
+<meta property="og:image" content="http://example.com/pictures/xiaoyuanwang_autologin/image_7.jpg">
+<meta property="og:image" content="http://example.com/pictures/xiaoyuanwang_autologin/image_8.jpg">
 <meta property="article:published_time" content="2022-06-22T13:29:51.000Z">
-<meta property="article:modified_time" content="2022-06-23T11:37:28.539Z">
+<meta property="article:modified_time" content="2022-07-06T12:35:37.391Z">
 <meta property="article:author" content="Tobios">
 <meta property="article:tag" content="技巧">
 <meta property="article:tag" content="校园网">
 <meta property="article:tag" content="shell">
 <meta property="article:tag" content="计划任务">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://www.sonder.tk:88/pictures/xiaoyuanwang_autologin/image_1.jpg">
+<meta name="twitter:image" content="http://example.com/pictures/xiaoyuanwang_autologin/image_1.jpg">
   
   
 
@@ -129,22 +129,22 @@
 
 <p>接下来实现连接WiFi自动运行脚本<br>这里借鉴于知乎</p>
 <ol>
-<li><p>打开任务计划程序<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://www.sonder.tk:88/pictures/xiaoyuanwang_autologin/image_1.jpg" alt="image.jpg"></p>
+<li><p>打开任务计划程序<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/pictures/xiaoyuanwang_autologin/image_1.jpg" alt="image.jpg"></p>
 </li>
-<li><p>点击右侧‘创建任务’，名称、描述按自己喜好写<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://www.sonder.tk:88/pictures/xiaoyuanwang_autologin/image_2.jpg" alt="image.jpg"></p>
+<li><p>点击右侧‘创建任务’，名称、描述按自己喜好写<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/pictures/xiaoyuanwang_autologin/image_2.jpg" alt="image.jpg"></p>
 </li>
-<li><p>点击触发器选项并点击新建<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://www.sonder.tk:88/pictures/xiaoyuanwang_autologin/image_3.jpg" alt="image.jpg"></p>
+<li><p>点击触发器选项并点击新建<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/pictures/xiaoyuanwang_autologin/image_3.jpg" alt="image.jpg"></p>
 </li>
-<li><p>选择开始任务为发生事件时，并选择自定义、点击新建事件筛选器<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://www.sonder.tk:88/pictures/xiaoyuanwang_autologin/image_4.jpg" alt="image.jpg"></p>
+<li><p>选择开始任务为发生事件时，并选择自定义、点击新建事件筛选器<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/pictures/xiaoyuanwang_autologin/image_4.jpg" alt="image.jpg"></p>
 </li>
-<li><p>点击xml并勾选手动编辑查询，替换为以下内容，后点确定<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://www.sonder.tk:88/pictures/xiaoyuanwang_autologin/image_5.jpg" alt="image.jpg"></p>
+<li><p>点击xml并勾选手动编辑查询，替换为以下内容，后点确定<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/pictures/xiaoyuanwang_autologin/image_5.jpg" alt="image.jpg"></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">QueryList</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Query</span> <span class="attr">Id</span>=<span class="string">&quot;0&quot;</span> <span class="attr">Path</span>=<span class="string">&quot;Microsoft-Windows-WLAN-AutoConfig/Operational&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Select</span> <span class="attr">Path</span>=<span class="string">&quot;Microsoft-Windows-WLAN-AutoConfig/Operational&quot;</span>&gt;</span>*[System[(EventID=8001)]][EventData[Data[@Name=&#x27;SSID&#x27;]=&#x27;CQUPT&#x27;] or EventData[Data[@Name=&#x27;SSID&#x27;]=&#x27;CQUPT-2.4G&#x27;] or EventData[Data[@Name=&#x27;SSID&#x27;]=&#x27;CQUPT-5G&#x27;]]<span class="tag">&lt;/<span class="name">Select</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">Query</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">QueryList</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>然后点击操作选项并点击新建<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://www.sonder.tk:88/pictures/xiaoyuanwang_autologin/image_6.jpg" alt="image.jpg"></p>
+<li><p>然后点击操作选项并点击新建<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/pictures/xiaoyuanwang_autologin/image_6.jpg" alt="image.jpg"></p>
 </li>
-<li><p>选择操作为‘启动程序’，并选择脚本的位置，然后确定<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://www.sonder.tk:88/pictures/xiaoyuanwang_autologin/image_7.jpg" alt="image.jpg"></p>
+<li><p>选择操作为‘启动程序’，并选择脚本的位置，然后确定<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/pictures/xiaoyuanwang_autologin/image_7.jpg" alt="image.jpg"></p>
 </li>
-<li><p>如果你使用笔记本电脑，需要额外关注‘条件’中的‘电源’选项<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://www.sonder.tk:88/pictures/xiaoyuanwang_autologin/image_8.jpg" alt="image.jpg"></p>
+<li><p>如果你使用笔记本电脑，需要额外关注‘条件’中的‘电源’选项<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/pictures/xiaoyuanwang_autologin/image_8.jpg" alt="image.jpg"></p>
 </li>
 <li><p>最后点击确定就ok了</p>
 </li>
